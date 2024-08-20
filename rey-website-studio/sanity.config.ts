@@ -6,9 +6,11 @@ import {schemaTypes} from './schemaTypes'
 export default defineConfig({
   name: 'default',
   title: 'rey-website-studio',
-
-  projectId: '4lhd8m96',
-  dataset: 'production',
+ 
+  projectId: "4lhd8m96",
+  dataset: "production",
+  apiVersion: "2024-08-02",
+  useCdn: false, //ref : https://www.sanity.io/help/js-client-cdn-configuration
 
   plugins: [structureTool(), visionTool()],
 
