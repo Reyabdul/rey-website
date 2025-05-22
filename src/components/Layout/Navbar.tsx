@@ -1,10 +1,11 @@
 import {useState} from "react";
 import { Link } from "react-router";
 import { useQuery } from "@tanstack/react-query";
-import { client } from "../lib/sanity";
+//Sanity
+import { client } from "../../lib/sanity";
 import { PortableText } from "@portabletext/react";
+//Styling
 import { motion, AnimatePresence } from "motion/react";
-//Icons
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 
@@ -36,12 +37,12 @@ export const Navbar = () => {
           </Link>
         </div>
         <div className="flex gap-8">
-          <Link to="/media" className="[&.active]:font-bold max-md:hidden">
+          {/* <Link to="/media" className="[&.active]:font-bold max-md:hidden">
             Media
           </Link>
           <Link to="/works" className="[&.active]:font-bold max-md:hidden">
             Works
-          </Link>
+          </Link> */}
           <div className="cursor-pointer" onClick={toggleMenu}>
             <RxHamburgerMenu size={24} />
           </div>
@@ -51,7 +52,7 @@ export const Navbar = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="fixed inset-0 bg-black opacity-90 z-20 flex items-center justify-center"
+            className="fixed inset-0 bg-black opacity-80 z-20 flex items-center justify-center"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
@@ -72,9 +73,9 @@ export const Navbar = () => {
                   <h2 className="text-[4rem] max-md:text-[1.2rem] font-bold">
                     {menuData.heading}
                   </h2>
-                  <p className="text-[0.8rem] md:text-sm">
+                  <div className="text-[0.8rem] md:text-sm">
                     <PortableText value={menuData.content} />
-                  </p>
+                  </div>
                 </div>
                 <div className="py-2 border-b-1">
                   <h3 className="font-bold  max-md:text-[1rem]">
@@ -104,13 +105,13 @@ export const Navbar = () => {
                 >
                   About
                 </Link>
-                <Link
+                {/* <Link
                   to="/media"
                   className="[&.active]:font-extrabold md:text-[3rem]"
                   onClick={closeMenu}
                 >
                   Media
-                </Link>
+                </Link> */}
                 <Link
                   to="/works"
                   className="[&.active]:font-extrabold md:text-[3rem]"

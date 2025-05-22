@@ -5,6 +5,7 @@
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
+    "rootDirs": [".", "./.react-router/types"],
     "skipLibCheck": true,
 
     /* Bundler mode */
@@ -23,5 +24,8 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    ".react-router/types/**/*"
+  ]
 }
