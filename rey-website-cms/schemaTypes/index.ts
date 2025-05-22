@@ -1,4 +1,4 @@
-// import { aboutType } from "./aboutType"
+import { aboutType } from "./aboutType"
 import { homeType } from "./homeType"
 // import { mediaType } from "./mediaType"
 import { menuType } from "./menuType"
@@ -6,7 +6,7 @@ import { menuType } from "./menuType"
 
 export const schemaTypes = [
   homeType,
-  // aboutType,
+  aboutType,
   // mediaType,
   // worksType,
   menuType
